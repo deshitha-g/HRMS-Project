@@ -1,13 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {useState,useEffect} from "react";
 import Axios from 'axios';
 
 function PageEMP() {
   const navigate = useNavigate(); // Define the navigate function
-
+  const { id_to_transfer } = useParams();
   const [employee,setEmployee]=useState([]);
 
+  console.log('id_to_transfer in PageHR:', id_to_transfer);
 
   const getEmployee = () => {
     Axios.get("http://localhost:3000/emp_view").then((response) => {

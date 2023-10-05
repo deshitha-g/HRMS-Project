@@ -15,8 +15,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/PageEMP" element={<PageEMP />} />
-        <Route path="/PageHR" element={<PageHR />} />
+        <Route path="/PageHR/:id_to_transfer" element={<PageHR />} />
+      <Route path="/PageEMP/:id_to_transfer" element={<PageEMP />} />
         <Route path="/PageEMP/LeaveReq" element={<LeaveReq />} />
         <Route path="/PageEMP/PasswordChange" element={<PasswordChange />} />
         <Route path="/PageEMP/Supervisor" element={<Supervisor />} />

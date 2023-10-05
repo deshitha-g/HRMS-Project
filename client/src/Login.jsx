@@ -30,13 +30,13 @@ function Login() {
 
     const user_0 = passwordList.find((user) => user.User_ID === formData.User_ID); // Use 'User_ID' instead of 'email'
     console.log(formData.User_ID);
-    
+    const id_to_transfer = user_0.User_ID;
     if (user_0 && formData.password === user_0.Password) {
       if (user_0.Job_Title === 'HR Manager') {
-        navigate('/PageHR');
+        navigate(`/PageHR/${id_to_transfer}`);
       } else {
-        navigate('/PageEMP');
-      }
+        navigate(`/PageEMP/${id_to_transfer}`);
+            }
     } else {
       alert('Invalid username or password');
     }
