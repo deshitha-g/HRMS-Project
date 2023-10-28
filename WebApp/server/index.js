@@ -710,7 +710,7 @@ app.get('/employee_data_Branch_10', (req, res) => {
   const query = 'SELECT * FROM EmployeeReportByBranch10';
   fetchEmployeeData(req, res, query);
 });
-});
+
 app.listen(3000, () => {
   console.log("Yey, your server is running on port 3000");
 });
